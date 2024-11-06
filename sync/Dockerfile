@@ -19,6 +19,4 @@ COPY ./config.yml /meilisync/config.yml.template
 
 # Use CMD to preprocess config.yml using the variables and then run the default command
 RUN envsubst < /meilisync/config.yml.template > /meilisync/config.yml
-RUN cat /meilisync/config.yml
-# Output the config file so you can see what has been setup (bad idea?)
 CMD ["meilisync", "start"]
