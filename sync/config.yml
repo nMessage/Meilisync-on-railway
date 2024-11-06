@@ -1,0 +1,23 @@
+# For debugging - Turn off in production
+debug: ${DEBUG}
+
+meilisearch:
+  api_url: http://${MEILISERCH_URL}
+  api_key: ${MEILISERCH_ADMIN_API_KEY}
+  insert_size: 1000
+  insert_interval: 10
+source:
+  type: postgres
+  host: ${POSTGRES_HOST}
+  port: ${POSTGRES_PORT}
+  database: ${POSTGRES_DB}
+  user: ${POSTGRES_USER}
+  password: ${POSTGRES_PASSWORD}
+progress:
+  type: file
+sync:
+  # - table: meilisearch_index_view
+  #   index: meilisearch_index_name
+  #   pk: postgresql_pk
+  #   full: true
+  #   # Other settings see https://github.com/long2ice/meilisync
