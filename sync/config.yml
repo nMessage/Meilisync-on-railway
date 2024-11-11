@@ -16,8 +16,8 @@ source:
 progress:
   type: file
 sync:
-  # - table: meilisearch_index_view
-  #   index: meilisearch_index_name
-  #   pk: postgresql_pk
-  #   full: true
+  - table: ${TABLE_1} # meilisearch_table_name
+    index: ${INDEX_1} # meilisearch_index_name
+    pk: ${PK_1} # postgresql_pk
+    full: true
   #   # Other settings see https://github.com/long2ice/meilisync
