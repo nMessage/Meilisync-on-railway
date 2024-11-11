@@ -14,6 +14,9 @@ ARG POSTGRES_DB
 ARG POSTGRES_USER
 ARG POSTGRES_PASSWORD
 ARG DEBUG
+ARG TABLE_1
+ARG INDEX_1
+ARG PK_1
 
 # Copy the config.yml template file from the host to the container
 COPY ./config.yml /meilisync/config.yml.template
